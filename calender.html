@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2 id="month"></h2>
+<div id="calendar"></div>
+
+<script>
+let d = new Date();
+let year = d.getFullYear();
+let month = d.getMonth();
+
+document.getElementById("month").innerText =
+  d.toLocaleString("default", {month:"long"}) + " " + year;
+
+let days = new Date(year, month + 1, 0).getDate();
+let cal = "";
+
+for (let i = 1; i <= days; i++) {
+  cal += i + " &nbsp; ";
+  if (new Date(year, month, i).getDay() == 0)
+    cal += "<br>";
+}
+
+document.getElementById("calendar").innerHTML = cal;
+</script>
+</body>
+</html>
