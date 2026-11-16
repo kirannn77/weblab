@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Exam</title>
+</head>
+<body>
+  <h2>Online Exam</h2>
+  <form id="exam">
+    <p>1. What is the capital of India?</p>
+    <input type="radio" name="q1" value="a"> Mumbai<br>
+    <input type="radio" name="q1" value="b"> New Delhi<br>
+
+    <p>2. Which is a file extension for html program?</p>
+    <input type="radio" name="q2" value="a"> .html<br>
+    <input type="radio" name="q2" value="b"> .py<br>
+
+    <p>3. Which language runs in a browser?</p>
+    <input type="radio" name="q3" value="a"> JavaScript<br>
+    <input type="radio" name="q3" value="b"> C<br><br>
+
+    <button type="submit">Submit Exam</button>
+  </form>
+
+  <h3 id="result"></h3>
+
+  <script>
+    document.getElementById("exam").onsubmit =
+      function(event) {
+        event.preventDefault();
+        let score = 0;
+
+        if (this.q1.value === "b") score++;
+        if (this.q2.value === "a") score++;
+        if (this.q3.value === "a") score++;
+
+        document.getElementById("result").innerText =
+          "Your Score: " + score + "/3";
+      };
+  </script>
+</body>
+</html>

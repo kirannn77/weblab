@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String and Math Objects</title>
+</head>
+<body>
+    <h2>JavaScript String Object</h2>
+    <p id="str"></p>
+
+    <h2>JavaScript Math Object</h2>
+    <p id="math"></p>
+
+    <script>
+        let s = "Hello JavaScript";
+
+        document.getElementById("str").innerHTML =
+            "Original String: " + s + "<br>" +
+            "Length: " + s.length + "<br>" +
+            "Uppercase: " + s.toUpperCase() + "<br>" +
+            "Lowercase: " + s.toLowerCase() + "<br>" +
+            "Substring: " + s.substring(0, 5) + "<br>" +
+            "Replace: " + s.replace("JavaScript", "World");
+
+        document.getElementById("math").innerHTML =
+            "Square Root of 25: " + Math.sqrt(25) + "<br>" +
+            "Power (2^3): " + Math.pow(2, 3) + "<br>" +
+            "Round (4.6): " + Math.round(4.6) + "<br>" +
+            "Ceiling (4.2): " + Math.ceil(4.2) + "<br>" +
+            "Floor (4.8): " + Math.floor(4.8) + "<br>" +
+            "Absolute (-10): " + Math.abs(-10);
+    </script>
+</body>
+</html>

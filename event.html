@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Handling</title>
+</head>
+<body>
+
+    <h2>JavaScript Events</h2>
+
+    <button onclick="clickEvent()">Click Me</button>
+
+    <p id="demo" onmouseover="mouseEvent()">
+        Move Mouse Here
+    </p>
+
+    <input type="text" id="name"
+           onchange="changeEvent()"
+           placeholder="Enter your name">
+
+    <script>
+        function clickEvent() {
+            alert("Button Clicked!");
+        }
+
+        function mouseEvent() {
+            document.getElementById("demo").innerHTML =
+                "Mouse Over Event";
+        }
+
+        function changeEvent() {
+            alert("Text Changed!");
+        }
+    </script>
+
+</body>
+</html>
