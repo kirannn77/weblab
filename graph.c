@@ -1,12 +1,12 @@
 #include<stdio.h>
-#define MAX20
+#define MAX 20
 int adj[MAX][MAX];
 int visited[MAX];
 int queue[MAX];
 int front=-1,rear=-1;
 void enqueue(int vertex)
 {
-if(reaar==MAX-1)
+if(rear==MAX-1)
 return;
 if(front==-1)
 front=0;
@@ -21,14 +21,15 @@ front=rear=-1;
 }
 return vertex;
 }
-void BFS(int start,int n)
+void BFS(int start,int n,int i,current)
+{
 for(i=0;i<n;i++)
-visitted[i]=0;
+visited[i]=0;
 front =rear=-1;
 visited[start]=1;
 enqueue(start);
 printf("bfs traversel");
-while(front!=1)
+while(front!=-1)
 {
 current=dequeue();
 printf("%d",current);
